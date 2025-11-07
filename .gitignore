@@ -1,4 +1,5 @@
 .spyproject/
 config/*
+database/*
 
-!config/example_settings.py
+!*example*
