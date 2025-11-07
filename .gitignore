@@ -1,0 +1,4 @@
+.spyproject/
+config/*
+
+!config/example_settings.py
