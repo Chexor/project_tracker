@@ -8,7 +8,8 @@ Created on Fri Nov  7 22:36:58 2025
 from database import Database
 
 class Project:
-    def __init__(self, name, description=None, is_active=True):
+    def __init__(self, name, id=None, description=None, is_active=True):
+        self.id = id
         self.name = name
         self.description = description
         self.is_active = is_active
@@ -18,8 +19,8 @@ class Project:
         db.execute(query, (self.name, self.description, self.is_active))
         
     def update(self, db: Database):
-        query = "UPDATE projects SET name = ?, desription = ?, is_active = ? WHERE id = ?"
-        db.execute(query, (self.name, self.description, self.is_active))
+        query = "UPDATE projects SET name = ?, description = ?, is_active = ? WHERE id = ?"
+        db.execute(query, (self.name, self.description, self.is_active, self.id))
     
     @classmethod
     def from_row(cls, row):

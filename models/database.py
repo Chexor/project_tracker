@@ -44,7 +44,7 @@ class Database:
                                start_time TEXT NOT NULL,
                                end_time TEXT NOT NULL,
                                project_id INTEGER NOT NULL,
-                               comment TEXT,
+                               description TEXT,
                                PRIMARY KEY("id" AUTOINCREMENT),
                                FOREIGN KEY("project_id") REFERENCES "projects"("id")
                                )
