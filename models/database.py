@@ -31,7 +31,8 @@ class Database:
                            CREATE TABLE IF NOT EXISTS projects (
                                id INTEGER NOT NULL UNIQUE,
                                name TEXT NOT NULL,
-                               description TEXT
+                               description TEXT,
+                               is_active INTEGER NOT NULL,
                                PRIMARY KEY("id" AUTOINCREMENT)
                                )
                            """)
